@@ -1,8 +1,26 @@
 
-# Abel
+# Talk to Abel
 
-Abel is a unique way to engage with AI. It's conversational, natural, and kid-friendly. Users can chat with a variety of "personalities", or create their own. Use it to roleplay magical adventures with Theo the knight and renowed pirate Flynn Seaborne, closer-to-reality scenarios with Brayden the gamer and Mason the fitness buff, or use our custom prompting tool to experiment with advanced AI. You've never chatted like this before.
+Talk to Abel is a real-time conversational AI web app built for children interaction. It blends character-based prompting, live speech-to-text, and streaming responses to deliver playful, accessible interactions for kids and families.
 
-To run the application locally:
+## Key Features
+- Character catalog with curated personalities and custom prompt builder
+- Live audio capture, Whisper transcription, and Google Cloud speech synthesis
+- Moderation and sentiment checks before conversations reach the model
+- Canvas-based visualizations and adaptive theming for full-screen experiences
+- Persistent chat state backed by Firebase auth and sockets for multi-device sync
 
-- Run npm run dev and access it on localhost:3000
+## Stack
+- Next.js 13, TypeScript, Zustand
+- WebRTC + custom websocket gateway for audio events
+- OpenAI GPT models for dialogue and Whisper for STT
+- Google Cloud Text-to-Speech for voices
+
+## Quick Start
+1. Install dependencies: `yarn install`
+2. Copy `.env.example` to `.env.local` and fill in the required keys (OpenAI, Google Cloud, Firebase)
+3. Run the dev server: `yarn dev`
+4. Open `http://localhost:3000`
+
+
+Ensure secrets are injected at runtime (e.g., managed secrets or platform env vars). For production use HTTPS and provision long-lived OpenAI/Google keys with least privilege.
