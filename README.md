@@ -1,7 +1,7 @@
 
 # Talk to Abel
 
-Talk to Abel is a real-time conversational AI web app built for children interaction. It blends character-based prompting, live speech-to-text, and streaming responses to deliver playful, accessible interactions for kids and families.
+Talk to Abel is a real-time conversational AI web app built for interactive language learning for kids. It blends character-based prompting, live speech-to-text, and streaming responses to deliver playful, accessible interactions for kids and families.
 
 ## Key Features
 - Character catalog with curated personalities and custom prompt builder
