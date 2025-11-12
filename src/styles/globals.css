@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+  --hue: 0deg;
+  --primary: #00a1de;
+  --secondary: #009b3a;
+}
+
+* {
+  font-family: 'Nunito Sans';
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  filter: hue-rotate(var(--hue));
+}
+
+.vertAlignHelper {
+  vertical-align: middle;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  margin: 5vh;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: white;
+  height: 6.5vh;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 2.5vh;
+}
+
+li {
+  float: center;
+  display: flex;
+}
+
+li a {
+  height: 50px;
+  display: block;
+  color: var(--primary);
+  text-align: center;
+  margin: 0;
+  padding-left: 2vh;
+  padding-top: 1.5vh;
+  font-weight: 800;
+  font-size: x-large;
+}
+img {
+  padding-left: 4vh;
+  padding-top: 0;
+}
+.login-switch {
+  font-size: 1rem;
+}
+
+.conversation {
+  flex-grow: 1;
+}
+
+.messages {
+  margin-top: 20px;
+  margin-right: 15vh;
+  overflow-y: scroll;
+  max-height: 60vh;
+  border: none;
+  border-radius: 20px;
+  background: white;
+}
+
+.message {
+  text-align: left;
+  width: fit-content;
+  margin-right: auto;
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 3px solid var(--primary);
+}
+
+.message i{
+    color: #FFE870;
+}
+
+.googleSignIn {
+  color: pink;
+  background-color: pink;
+  border: 2px solid pink;
+}
+.googleIcon {
+  margin: 10px;
+}
+userMessage {
+  width: fit-content;
+  margin-left: auto;
+  background: white;
+  color: var(--primary);
+}
+
+.abelWrapper {
+  margin: 20px;
+}
+
+.abelIcon {
+  margin-left: 15vh;
+  border-radius: 0%;
+  float: left;
+  width: 300px;
+  height: 300px;
+  opacity: 0.01;
+  transition: opacity 2s;
+}
+
+/* make abel icon fade in when visible */
+.abelIcon.visible {
+  opacity: 1;
+}
+
+.options {
+  position: fixed;
+  top: 2.5vh;
+  right: 8vh;
+  /* border: 3px solid #A1BFB3; */
+  border-radius: 35px;
+  flex-shrink: 0;
+  padding-top: 1vh;
+  padding-bottom: 0.5vh;
+  padding-left: 1.25vh;
+  padding-right: 1.25vh;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  padding: 30px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  max-height: 70vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+
+.modal h2 {
+  color: black;
+}
+
+.modal h3 {
+  color: #a1bfb3;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.conversationSwitch a {
+  color: var(--primary);
+}
+
+.openPanelButton {
+  cursor: pointer;
+  color: #a1bfb3;
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.openPanelButton:hover {
+  transition: all 300ms ease;
+  padding: 8px;
+  color: white;
+  background: #a1bfb3;
+  border-radius: 25px;
+}
+
+.closePanelButton {
+  cursor: pointer;
+  font-size: 2em;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.inputPanelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.inputPanelButton {
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px;
+  border: #f0f0f0 solid 2px;
+  border-radius: 5px;
+}
+
+.inputPanelButton b {
+  margin-bottom: 1vh;
+}
+
+.inputPanelList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.inputPanelButton:hover {
+  letter-spacing: 0.015em;
+}
+
+.promptSection {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    margin: 2.5vh 5vh 0 5vh;
+  }
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: white;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+  }
+
+  li {
+    float: center;
+    display: flex;
+  }
+
+  li a {
+    height: 50px;
+    display: block;
+    color: var(--primary);
+    text-align: center;
+    margin: 0;
+    padding-left: 3%;
+    padding-top: 4%;
+    font-weight: 800;
+    font-size: x-large;
+  }
+
+  img {
+    padding-left: 3%;
+    padding-top: 2%;
+    width: 10%;
+  }
+
+  .abelIcon {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .conversation {
+    flex-grow: 1;
+    height: 80vh;
+    flex-grow: 1;
+    margin-right: 0;
+  }
+
+  .messages {
+    position: static;
+    top: 0;
+    padding-left: 0;
+    width: 100vw;
+    max-height: 55%;
+    border-left: none;
+    border-right: none;
+    margin-right: 9.5vw;
+    margin-top: 0;
+  }
+
+  .options {
+    position: fixed;
+    top: 1.5%;
+    right: 0;
+    margin: 10px 0;
+    border: none;
+  }
+
+  .openPanelButton {
+    cursor: pointer;
+    padding-left: 0.1vh;
+  }
+
+  .closePanelButton {
+    cursor: pointer;
+    font-size: 2em;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    border: none;
+  }
+
+  .modal {
+    box-shadow: none;
+    padding: 30px;
+    border: none;
+    text-align: center;
+    width: 90vw;
+    max-height: 55vh;
+    position: fixed;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* .promptSection {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 0.8rem;
+    } */
+
+  .modal h2 {
+    color: black;
+    background-color: white;
+  }
+
+  /* .messageContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    } */
+
+  .modal h3 {
+    color: #a1bfb3;
+    font-weight: 500;
+    font-size: medium;
+    background-color: white;
+  }
+
+  .modal::backdrop {
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .conversationSwitch {
+    position: fixed;
+    bottom: 1vh;
+    left: 2vw;
+  }
+
+  .inputPanelGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: left;
+  }
+
+  .inputPanelButton {
+    cursor: pointer;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    border: #f0f0f0 solid 2px;
+    border-radius: 5px;
+  }
+}
